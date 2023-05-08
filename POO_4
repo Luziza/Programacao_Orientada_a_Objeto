@@ -1,0 +1,125 @@
+''' 2. Vamos voltar para a classe Usuario que desenvolvemos nas atividades anteriores. Agora vamos
+definir o primeiroNome do usuário como uma propriedade privada (private).
+  Crie um método para definir o valor da propriedade primeiroNome. Use o modificador de
+acesso correto para ele.
+
+  Agora, crie um método para retornar o valor primeiroNome.
+  Crie um objeto chamado usuario1. Depois defina seu primeiro nome como "Joe" e faça com
+que ele retorne este nome. '''
+
+class Usuario:
+  __primeiroNome= ""
+
+  def setNome(self, primeiroNome):
+    self.__primeiroNome = primeiroNome
+
+  def getNome(self):
+    return self.__primeiroNome
+
+usuario1 = Usuario()
+usuario1.setNome("Joe")
+
+print(usuario1.getNome())
+
+
+''' 3. Crie uma classe chamada Empregado(), com três propriedades: nome, salario (deve ser
+privada) e projeto. Ela também possui um método chamado “trabalho()”, que deverá
+imprimir o nome do funcionário e o projeto em que ele está trabalhando e um outro método
+chamado “mostrar()” para exibir os detalhes desse empregado (i.e. nome e salário). Atente
+para o modificador de acesso da propriedade “salario”. Use o método adequado para ter
+acesso a ela. Crie um objeto desta classe (i.e. instância) e use os métodos para visualizar os
+dados. '''
+
+class Empregado():
+  nome = ""
+  __salario = ""
+  projeto = ""
+
+  def setMostrar(self, salario):
+    self.__salario = salario
+  
+  def getMostar(self):
+    return self.nome + ", recebe " + self.__salario + " reais , está trabalhando em um " + self.projeto
+
+instancia = Empregado()
+instancia.nome = "Luiza"
+instancia.setMostrar("1200")
+instancia.projeto="formulário"
+
+print(instancia.getMostar())
+
+
+''' 4. Crie uma classe chamada Robo(). Ela deverá ter duas propriedades privadas: nome e
+ano_construcao. Também deverá ter um método de nome “diga_alo()”, para mostrar na
+tela o nome do robô e seu ano de construção. Crie os métodos “setters” e “getters”
+necessários. Instancie a classe e use os métodos criados para visualizar / atualizar os dados. '''
+
+class Robo():
+  __nome = ""
+  __ano_construcao = ""
+
+  def setDiga_alo(self, nome, ano_construcao):
+    self.__nome = nome
+    self.__ano_construcao = ano_construcao
+  
+  def getDiga_alo(self):
+    return "Olá, " + self.__nome + " " + self.__ano_construcao 
+
+usuario1 = Robo()
+usuario1.setDiga_alo("Luiza", "2003")
+
+print(usuario1.getDiga_alo())
+
+''' 5. Implemente uma classe chamada Laptop que possua um atributo privado chamado “preco”
+que armazena o preço do laptop (sem qualquer validação). Em seguida, implemente um método
+para ler esse atributo chamado “get_preco()” e um método para modificar esse atributo
+chamado “set_preco()” sem validação também. Em seguida, crie uma instância da classe
+Laptop siga estas etapas:
+• usando o método “get_preco()” imprima o valor do atributo “preco” na tela
+• usando o método “set_preco()”, defina o valor do atributo “preco” para 3999” '''
+
+class Laptop():
+  preco = ""
+
+  def get_preco(self):
+    return self.preco
+
+  def set_preco(self, preco):
+    self.preco = preco
+
+usuario = Laptop()
+usuario.set_preco("1200")
+
+print(usuario.get_preco())
+
+
+'''6. Implemente uma classe chamada Pessoa que tenha dois atributos privados chamados
+“primeiroNome” e “ultimoNome”, respectivamente. Em seguida, implemente métodos
+chamados “getPrimeiroNome()” e “getUltimoNome()”, para ler os atributos, e os
+métodos “setPrimeiroNome()” e “setUltimoNome()” para atribuir valores a eles. Depois
+crie uma instância da classe Pessoa definindo os seguintes valores:
+primeiroNome = 'João'
+ultimoNome = 'Carvalho'
+Após, imprima os valores desses atributos no console. '''
+
+class Pessoa():
+  __primeiroNome = ""
+  __ultimoNome = ""
+
+  def getPrimeiroNome(self):
+    return self.__primeiroNome
+
+  def getUltimoNome(self):
+    return self.__ultimoNome
+
+  def setPrimeiroNome(self, primeiroNome):
+    self.__primeiroNome = primeiroNome
+  
+  def setUltimoNome(self, ultimoNome):
+    self.__ultimoNome = ultimoNome
+
+usuario = Pessoa()
+usuario.setPrimeiroNome("João")
+usuario.setUltimoNome("Carvalho")
+
+print(usuario.getPrimeiroNome(), usuario.getUltimoNome())
